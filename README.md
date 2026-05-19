@@ -294,7 +294,7 @@ trained_model, history = train_mae(
 
 📄 **[Face-Aware Pretraining Strategy for Masked Autoencoders](paper/FaceAwarePretrainingStrategy.pdf)**
 
-> Đỗ Đăng Khoa et al. (2026). *Face-Aware Pretraining Strategy for Masked Autoencoders*. FPT University, DSP391m Final Report.
+> Đoàn Đăng Khoa et al. (2026). *Face-Aware Pretraining Strategy for Masked Autoencoders*. FPT University.
 
 **Abstract excerpt:** We propose a domain-specific pretraining strategy for Masked Autoencoders (MAE) applied to facial images. By leveraging pre-computed facial landmark masks to identify identity-critical patches, our Face-Aware masking concentrates reconstruction difficulty on semantically meaningful regions during self-supervised pretraining on CelebA. Combined with a region-weighted reconstruction loss, the approach yields improved localized MSE on critical facial regions and superior linear probing accuracy on identity-related CelebA attributes, compared to Random and Block-wise masking baselines.
 
