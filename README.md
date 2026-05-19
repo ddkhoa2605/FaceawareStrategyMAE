@@ -33,7 +33,7 @@ This approach is compared against two baselines:
 
 ## Overall Pipeline
 
-![Overall Pipeline](paper/FaceAwarePretrainingStrategy/FaceAwarePretrainingStrategy/LaTeXTemplate/Images/Over%20all%20Pipeline.png)
+![Overall Pipeline](images/overall_pipeline.png)
 
 > The MAE pipeline: (1) A 224×224 face image is divided into a 14×14 grid of 16×16 patches. (2) A strategy-specific masking module selects 147 tokens to hide, keeping 49 visible. (3) The ViT-Small encoder (6 layers, dim=384, 6 heads) processes only the 49 visible tokens. (4) The lightweight decoder (4 layers, dim=256, 8 heads) reconstructs all 196 patches from visible encodings + learnable mask tokens.
 
@@ -41,7 +41,7 @@ This approach is compared against two baselines:
 
 ## Masking Strategy Visualization
 
-![Masking Visualization](paper/FaceAwarePretrainingStrategy/FaceAwarePretrainingStrategy/LaTeXTemplate/Images/Masking%20Visualation.jpg)
+![Masking Visualization](images/masking_visualization.jpg)
 
 > **(a) Random Masking** — Uniform random selection across all 196 patches.  
 > **(b) Block-wise Masking** — Spatially contiguous 2×2 block groups are masked together.  
@@ -190,7 +190,7 @@ def _compute_loss(self, imgs, pred, mask, region_masks=None):
 
 ### Reconstruction Quality
 
-![Reconstruction Comparison](paper/FaceAwarePretrainingStrategy/FaceAwarePretrainingStrategy/LaTeXTemplate/Images/final_combined.png)
+![Reconstruction Comparison](images/reconstruction_comparison.png)
 
 > **Full face and zoom-in crop comparison** of all three strategies. Face-Aware masking (ours) produces sharper reconstructions on identity-critical regions (eyes, mouth) relative to Random and Block-wise baselines.
 
